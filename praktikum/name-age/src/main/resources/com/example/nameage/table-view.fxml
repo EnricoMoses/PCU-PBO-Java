@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nameage.TableController">
+   <children>
+      <TableView fx:id="personTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="298.4000244140625" text="Name" />
+          <TableColumn fx:id="ageColumn" minWidth="0.0" prefWidth="300.79998779296875" text="Age" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="33.0" layoutY="29.0" text="Name" />
+            <TextField fx:id="nameField" layoutX="33.0" layoutY="47.0" prefHeight="26.0" prefWidth="231.0" />
+            <Label layoutX="33.0" layoutY="87.0" text="Age" />
+            <TextField fx:id="ageField" layoutX="33.0" layoutY="105.0" prefHeight="26.0" prefWidth="231.0" />
+            <Button layoutX="359.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="26.0" prefWidth="75.0" text="Add" />
+            <Button layoutX="359.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleDeleteFirst" text="Delete First" />
+            <Button layoutX="359.0" layoutY="131.0" mnemonicParsing="false" onAction="#handleDeleteLast" text="Delete Last" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
